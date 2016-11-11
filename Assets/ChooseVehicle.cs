@@ -20,7 +20,7 @@ public class ChooseVehicle : MonoBehaviour {
     public void LoadScene()
     {
         Vehicle.vehicle = derp;
-      SceneManager.LoadScene("HospitalPrototype");
+      SceneManager.LoadScene("Hospital");
      //  vehicle.vehicle = derp;
     }
 }
