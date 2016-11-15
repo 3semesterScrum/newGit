@@ -4,6 +4,7 @@ using System.Collections;
 public class TaskCollision : MonoBehaviour
 {
     public bool OnTarget = false;
+    public int objectiveOrder = 0;
     // Use this for initialization
     void Start()
     {
@@ -13,14 +14,14 @@ public class TaskCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Collision happened");
         if (col.gameObject.GetComponent<CarController>() != null)
         {
+            Debug.Log("Collision happened");
             OnTarget = true;
         }
     }
