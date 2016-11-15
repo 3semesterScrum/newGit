@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class TaskManager : MonoBehaviour
 {
-    [SerializeField]private List<Text> tasks = new List<Text>(4);
+    [SerializeField] private List<Text> tasks = new List<Text>(4);
+    [SerializeField] private List<GameObject> taskObjects = new List<GameObject>();
     public int objectiveCounter = 0;
     // Use this for initialization
     void Start()
@@ -21,8 +22,17 @@ public class TaskManager : MonoBehaviour
 
     public void CheckforObjective(Vector3 position)
     {
-        FindImages CheckMark = tasks[objectiveCounter].GetComponent<FindImages>();
-        CheckMark.checkboxes[1].color = new Color(255, 255, 255, 255);
+        objectiveCounter = 0;
+        foreach (GameObject gameobject in taskObjects)
+        {
+            if(gameobject.GetComponent<TaskCollision>().OnTarget == true)
+            {
+                FindImages CheckMark = tasks[objectiveCounter].GetComponent<FindImages>();
+                CheckMark.checkboxes[1].color = new Color(255, 255, 255, 255);
+            }
+            objectiveCounter++;
+        }
+        
     }
 
     public void CreateTasks(int number)
