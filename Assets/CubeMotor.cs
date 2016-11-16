@@ -28,7 +28,14 @@ public class CubeMotor : MonoBehaviour {
         }
         else
         {
-            car.Move(MoveVector.x, MoveVector.z, MoveVector.z, 0f);
+            if(MoveVector.z == 0 && MoveVector.x == 0)
+            {
+                car.Move(MoveVector.x, MoveVector.z, 1f, 0f);
+            }
+            else
+            {
+                car.Move(MoveVector.x, MoveVector.z, MoveVector.z, 0f);
+            }
         }
 	}
 

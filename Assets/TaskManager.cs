@@ -12,7 +12,6 @@ public class TaskManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        CreateTasks(3);
         int number = 0;
         foreach (GameObject gameObject in taskObjects)
         {
