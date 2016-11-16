@@ -27,8 +27,10 @@ public class TBone : MonoBehaviour
 
     public void CreateTBoner()
     {
-        GameObject tBoner = Instantiate(Car);
-        tBoner.transform.position = new Vector3(this.transform.position.x -6, this.transform.position.y + 1, this.transform.position.z + 7);
+        
+        GameObject tBoner = (GameObject)Instantiate(Car, this.transform.position + (transform.forward*5)+ (transform.right*10), transform.rotation);
+        Transform change = tBoner.transform;
+        change.Rotate(0f, 90f, 0f);
         Debug.Log("T-Boner spawned");
     }
 

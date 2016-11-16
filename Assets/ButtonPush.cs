@@ -25,14 +25,14 @@ public class ButtonPush : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         Vector2 pos;
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(buttonImg.rectTransform, eventData.position, eventData.pressEventCamera, out pos))
         {
-            buttonImg.color = Color.red;
+            buttonImg.color = Color.blue;
             taskManager.CheckforObjective(new Vector3(0,0,0));
         }
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (buttonImg.color == Color.red)
+        if (buttonImg.color == Color.blue)
         {
             buttonImg.color = Color.white;
             taskManager.objectiveCounter++;
