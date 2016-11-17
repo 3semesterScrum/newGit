@@ -41,14 +41,14 @@ public class MiniGameManager : MonoBehaviour {
         }
     }
 
-    public IEnumerable miniGameComplete()
+    public IEnumerator miniGameComplete()
     {
         if (miniGameTrigger==false)
         {
             Time.timeScale = 1;
-            panel.SetActive(false);
             print(Time.time);
             yield return new WaitForSeconds(5);
+            panel.SetActive(false);
             print(Time.time);
         }
     }
