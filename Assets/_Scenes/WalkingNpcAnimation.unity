@@ -877,10 +877,6 @@ MonoBehaviour:
   targets:
   - {fileID: 863124902}
   - {fileID: 57837893}
-  - {fileID: 161293540}
-  - {fileID: 1922527315}
-  - {fileID: 521519690}
-  - {fileID: 2012068437}
   - {fileID: 1210542891}
 --- !u!195 &1912248005
 NavMeshAgent:

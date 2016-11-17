@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NavMeshController : MonoBehaviour
+public class WalkingNPCController : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] targets;
@@ -13,8 +13,8 @@ public class NavMeshController : MonoBehaviour
     float turn = 0;
     float rotateNPC = 0;
     bool vehicleFound = false;
-    bool hasturned = false;
-
+    float waitTime = 0;
+    bool startMove = false;
     void Start()
     {
         agent = this.GetComponent<NavMeshAgent>();
@@ -28,29 +28,47 @@ public class NavMeshController : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log("Wait Time: " + waitTime);
+
         float avoidDist = Vector3.Distance(avoid.transform.position, transform.position);
-        Debug.Log("AvoidDist: " + avoidDist);
         AvoidVehicle(avoidDist);
         if (avoidDist > 8)
         {
             float dist = Vector3.Distance(targets[i].transform.position, transform.position);
             MoveNPC(dist);
         }
+
         float rotationDiff = yRotation - transform.rotation.y;
         AnimateNPC(rotationDiff);
 
     }
     public void AvoidVehicle(float avoidDist)
     {
+        if (avoidDist < 8 && startMove == false)
+        {
+            vehicleFound = true;
+            rotateNPC = 0.6f;
+            transform.Rotate(new Vector3(0, rotateNPC));
+            transform.Translate(new Vector3(0, 0, 3.5f) * Time.deltaTime);
+        }
         if (avoidDist < 8)
         {
-            rotateNPC = 1;
-            transform.Rotate(new Vector3(0, rotateNPC));
-            if (transform.rotation.y > 45)
-            {
-                rotateNPC = -1;
-            }
-            transform.Translate(new Vector3(0, 0, 2) * Time.deltaTime);
+            waitTime += Time.deltaTime;
+        }
+        if (waitTime > 2)
+        {
+            startMove = true;
+            vehicleFound = false;
+            agent.Resume();
+        }
+        if (waitTime > 8)
+        {
+            waitTime = 0;
+            startMove = false;
+        }
+        if (vehicleFound == true)
+        {
+            agent.Stop();
         }
     }
     public void AnimateNPC(float rotationDiff)
