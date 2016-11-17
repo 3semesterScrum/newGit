@@ -5,8 +5,6 @@ public class TBone : MonoBehaviour
 {
     [SerializeField]
     private GameObject Car;
-    [SerializeField]
-    private GameObject playerVehicle;
     float minSpeed;
     float maxSpeed = 1;
     float actualSpeed;
@@ -28,7 +26,7 @@ public class TBone : MonoBehaviour
     public void CreateTBoner()
     {
         
-        GameObject tBoner = (GameObject)Instantiate(Car, this.transform.position + (transform.forward*5)+ (transform.right*10), transform.rotation);
+        GameObject tBoner = (GameObject)Instantiate(Car, this.transform.position - (transform.forward)+ (transform.right*12), transform.rotation);
         Transform change = tBoner.transform;
         change.Rotate(0f, 90f, 0f);
         Debug.Log("T-Boner spawned");
@@ -36,7 +34,7 @@ public class TBone : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        minSpeed = playerVehicle.GetComponent<CarController>().CurrentSpeed;
+        minSpeed = other.gameObject.GetComponent<CarController>().CurrentSpeed;
         if (minSpeed > maxSpeed && canSpawn)
         {
             CreateTBoner();
