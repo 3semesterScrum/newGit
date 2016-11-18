@@ -27,7 +27,7 @@ public class TestSvar : MonoBehaviour
 
         var dip = gameObject.GetComponentInChildren<Text>().text;
         //Debug.Log(gameObject.GetComponent<Text>().text);
-
+        
         foreach (var item in mg.derp)
         {
             if (dip == item.Key && item.Value == true)
@@ -36,7 +36,7 @@ public class TestSvar : MonoBehaviour
                 colorBlock.highlightedColor = new Color(0, 1, 0, 1);
                 gameObject.GetComponent<Button>().colors = colorBlock;
                 mg.miniGameTrigger = false;
-               
+
                 StartCoroutine(mg.miniGameComplete());
             }
             else if (dip == item.Key && item.Value == false)
@@ -44,30 +44,37 @@ public class TestSvar : MonoBehaviour
                 ColorBlock colorBlock = gameObject.GetComponent<Button>().colors;
                 colorBlock.highlightedColor = new Color(1, 0, 0, 1);
                 gameObject.GetComponent<Button>().colors = colorBlock;
+                highlightRightAnswear();
 
-                var button = GameObject.Find("Button").GetComponentInChildren<Text>().text;
-                var button1 = GameObject.Find("Button (1)").GetComponentInChildren<Text>().text;
-                var button2 = GameObject.Find("Button (2)").GetComponentInChildren<Text>().text;
-                var button3 = GameObject.Find("Button (3)").GetComponentInChildren<Text>().text;
 
-                //if (item.Key==button|| item.Key == button1||item.Key==button2|| item.Key == button3)
-                //{
-                //    if (mg.derp.ContainsKey(button))
-                //    {
+                mg.miniGameTrigger = false;
+                StartCoroutine(mg.miniGameComplete());
 
-                //    }
-                //}
-                
-                
-                if (mg.derp.ContainsKey(button) && mg.derp.ContainsValue(true) == true) 
+            }
+        }
+    }
+    public void highlightRightAnswear()
+    {
+        var button = GameObject.Find("Button").GetComponentInChildren<Text>().text;
+        var button1 = GameObject.Find("Button (1)").GetComponentInChildren<Text>().text;
+        var button2 = GameObject.Find("Button (2)").GetComponentInChildren<Text>().text;
+        var button3 = GameObject.Find("Button (3)").GetComponentInChildren<Text>().text;
+        
+
+        foreach (var item in mg.derp)
+        {
+            if (item.Value == true)
+            {
+                var bongo = item.Key;
+                if (bongo==button)
                 {
                     var shit = GameObject.Find("Button").GetComponent<Button>();
                     ColorBlock newcolorBlock = shit.colors;
-
+                    
                     newcolorBlock.normalColor = new Color(0, 1, 0, 1);
                     shit.GetComponent<Button>().colors = newcolorBlock;
                 }
-              else  if (mg.derp.ContainsKey(button1) && mg.derp.ContainsValue(true) == true)
+                else if (bongo == button1)
                 {
                     var shit = GameObject.Find("Button (1)").GetComponent<Button>();
                     ColorBlock newcolorBlock = shit.colors;
@@ -75,7 +82,7 @@ public class TestSvar : MonoBehaviour
                     newcolorBlock.normalColor = new Color(0, 1, 0, 1);
                     shit.GetComponent<Button>().colors = newcolorBlock;
                 }
-             else   if (mg.derp.ContainsKey(button2) && mg.derp.ContainsValue(true) == true)
+                else if (bongo == button2)
                 {
                     var shit = GameObject.Find("Button (2)").GetComponent<Button>();
                     ColorBlock newcolorBlock = shit.colors;
@@ -83,19 +90,17 @@ public class TestSvar : MonoBehaviour
                     newcolorBlock.normalColor = new Color(0, 1, 0, 1);
                     shit.GetComponent<Button>().colors = newcolorBlock;
                 }
-             else   if (mg.derp.ContainsKey(button3) && mg.derp.ContainsValue(true) == true)
+                else if (bongo == button3)
                 {
                     var shit = GameObject.Find("Button (3)").GetComponent<Button>();
-                    ColorBlock newcolorBlock=shit.colors;
+                    ColorBlock newcolorBlock = shit.colors;
 
                     newcolorBlock.normalColor = new Color(0, 1, 0, 1);
-                   shit.GetComponent<Button>().colors = newcolorBlock;
+                    shit.GetComponent<Button>().colors = newcolorBlock;
                 }
 
-                mg.miniGameTrigger = false;
-                StartCoroutine(mg.miniGameComplete());
-               
             }
         }
+
     }
 }
