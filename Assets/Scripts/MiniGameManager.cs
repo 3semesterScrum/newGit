@@ -102,27 +102,6 @@ public class MiniGameManager : MonoBehaviour {
     }
 
 
-    //public void checkAnswear()
-    //{
-    // //var dip=   gameObject.GetComponent<Text>().text;
-    //  var dip= GameObject.Find("Button (3)").GetComponentInChildren<Text>().text;
-
-    //    Debug.Log(dip);
-    //    foreach (var item in derp)
-    //    {
-    //        if (dip==item.Key&&item.Value==true)
-    //        {
-    //            ColorBlock colorBlock = gameObject.GetComponent<Button>().colors;
-    //            colorBlock.highlightedColor= new Color(0, 1, 0, 1);
-
-
-    //        }
-    //        else if(dip == item.Key && item.Value == false)
-    //        {
-    //            ColorBlock colorBlock = gameObject.GetComponent<Button>().colors;
-    //            colorBlock.highlightedColor = new Color(1, 0, 0, 1);
-    //        }
-    //    }
-    //}
+   
 
 }
