@@ -40,6 +40,7 @@ public class TaskManager : MonoBehaviour
                     {
                         CheckMark.checkboxes[1].color = new Color(255, 255, 255, 255);
                         currentObjective = gameobject.GetComponent<TaskCollision>().objectiveOrder + 1;
+                        this.gameObject.GetComponent<TaskMiniGame>().TriggerMiniGame();
                     }
 
                 }
