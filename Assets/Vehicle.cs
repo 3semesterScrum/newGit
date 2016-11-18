@@ -7,8 +7,14 @@ public class Vehicle : MonoBehaviour
 {
 
     public static string vehicle;
-    public GameObject Car;
-    public Canvas Touch;
+    [SerializeField]
+    private GameObject patientbus;
+    [SerializeField]
+    private GameObject fejeblad;
+    [SerializeField]
+    private GameObject elTruck;
+    [SerializeField]
+    private GameObject sengeTransporter;
     // Use this for initialization
 
 
@@ -40,38 +46,44 @@ public class Vehicle : MonoBehaviour
                 // farve.material.color = Color.blue;
                 //  GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
-                GameObject car = Instantiate(Car);
+                GameObject carOne = Instantiate(patientbus);
                 // var derp = GameObject.Find("BackgroundImage");
                 //   car.gameObject.GetComponent<CubeMotor>().joystick=(VirtualJoystick)derp;
-                car.name = "patient bus";
-                car.tag = "vehicle";
+                carOne.name = "patient bus";
+                carOne.tag = "vehicle";
                 // Canvas  canvas = GameObject.Instantiate(Touch);
                 var derp = GameObject.FindGameObjectWithTag("GameController");
                 Debug.LogError(derp.GetComponentInChildren<Image>());
-                car.gameObject.GetComponent<CubeMotor>().joystick = derp.GetComponentInChildren<Image>().GetComponent<VirtualJoystick>();
+                carOne.gameObject.GetComponent<CubeMotor>().joystick = derp.GetComponentInChildren<Image>().GetComponent<VirtualJoystick>();
 
 
             }
             if (vehicle == "fejeblad")
             {
-                // farve.material.color = Color.green;
-                GameObject capsule = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-                capsule.name = "fejeblad";
-                capsule.tag = "vehicle";
+                GameObject carTwo = Instantiate(fejeblad);
+                carTwo.name = "fejeblad";
+                carTwo.tag = "vehicle";
+                var derp = GameObject.FindGameObjectWithTag("GameController");
+                Debug.LogError(derp.GetComponentInChildren<Image>());
+                carTwo.gameObject.GetComponent<CubeMotor>().joystick = derp.GetComponentInChildren<Image>().GetComponent<VirtualJoystick>();
             }
             if (vehicle == "el truck")
             {
-                GameObject cylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-                cylinder.name = "el truck";
-                cylinder.tag = "vehicle";
-                //  farve.material.color = Color.red;
+                GameObject carThree = Instantiate(elTruck);
+                carThree.name = "el truck";
+                carThree.tag = "vehicle";
+                var derp = GameObject.FindGameObjectWithTag("GameController");
+                Debug.LogError(derp.GetComponentInChildren<Image>());
+                carThree.gameObject.GetComponent<CubeMotor>().joystick = derp.GetComponentInChildren<Image>().GetComponent<VirtualJoystick>();
             }
             if (vehicle == "Senge transport")
             {
-                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                sphere.name = "senge transport";
-                sphere.tag = "vehicle";
-                // farve.material.color = Color.yellow;
+                GameObject carFour = Instantiate(sengeTransporter);
+                carFour.name = "senge transport";
+                carFour.tag = "vehicle";
+                var derp = GameObject.FindGameObjectWithTag("GameController");
+                Debug.LogError(derp.GetComponentInChildren<Image>());
+                carFour.gameObject.GetComponent<CubeMotor>().joystick = derp.GetComponentInChildren<Image>().GetComponent<VirtualJoystick>();
             }
             return true;
         }
