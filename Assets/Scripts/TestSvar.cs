@@ -74,7 +74,7 @@ public class TestSvar : MonoBehaviour
                     newcolorBlock.normalColor = new Color(0, 1, 0, 1);
                     shit.GetComponent<Button>().colors = newcolorBlock;
                 }
-                else if (bongo == button1)
+                 if (bongo == button1)
                 {
                     var shit = GameObject.Find("Button (1)").GetComponent<Button>();
                     ColorBlock newcolorBlock = shit.colors;
@@ -82,7 +82,7 @@ public class TestSvar : MonoBehaviour
                     newcolorBlock.normalColor = new Color(0, 1, 0, 1);
                     shit.GetComponent<Button>().colors = newcolorBlock;
                 }
-                else if (bongo == button2)
+                 if (bongo == button2)
                 {
                     var shit = GameObject.Find("Button (2)").GetComponent<Button>();
                     ColorBlock newcolorBlock = shit.colors;
@@ -90,7 +90,7 @@ public class TestSvar : MonoBehaviour
                     newcolorBlock.normalColor = new Color(0, 1, 0, 1);
                     shit.GetComponent<Button>().colors = newcolorBlock;
                 }
-                else if (bongo == button3)
+                 if (bongo == button3)
                 {
                     var shit = GameObject.Find("Button (3)").GetComponent<Button>();
                     ColorBlock newcolorBlock = shit.colors;
