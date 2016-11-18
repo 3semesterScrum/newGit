@@ -2,17 +2,13 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-
 namespace UnityStandardAssets.Vehicles.Car
 {
-    
     [RequireComponent(typeof (CarController))]
     public class CarUserControl : MonoBehaviour
     {
-        public GameObject script;
         private CarController m_Car; // the car controller we want to use
-        [SerializeField]private float h;
-        [SerializeField]private float v;
+
 
         private void Awake()
         {
@@ -24,12 +20,8 @@ namespace UnityStandardAssets.Vehicles.Car
         private void FixedUpdate()
         {
             // pass the input to the car!
-            h = CrossPlatformInputManager.GetAxis("Horizontal");
-            v = CrossPlatformInputManager.GetAxis("Vertical");
-            if(v == 1)
-            {
-                v = v;
-            }
+            float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            float v = CrossPlatformInputManager.GetAxis("Vertical");
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             m_Car.Move(h, v, v, handbrake);

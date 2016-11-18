@@ -50,13 +50,13 @@ public class MiniGameManager : MonoBehaviour
         {
             Time.timeScale = 1;
             print(Time.time);
+            derp.Clear();
+            muligheder.Clear();
             yield return new WaitForSeconds(5);
             panel.SetActive(false);
             print(Time.time);
             tm.call = true;
             tm.waitTime = 0;
-            derp.Clear();
-            muligheder.Clear();
         }
     }
 

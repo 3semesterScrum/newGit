@@ -197,10 +197,6 @@ namespace UnityStandardAssets.Vehicles.Car
         {
 
             float thrustTorque;
-            if(accel != 0)
-            {
-                thrustTorque = 0.001f;
-            }
             switch (m_CarDriveType)
             {
                 case CarDriveType.FourWheelDrive:
