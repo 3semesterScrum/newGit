@@ -102,8 +102,7 @@ public class MiniGameManager : MonoBehaviour
     public void dostuff()
     {
 
-        derp.Add("optionAjkdsgfiudsgiugfdioghiuofdhv8\n"+
-            "fidighgvfdihgifdhihifdhivhofdihiufdhvidoifvfdiovfdivhofdihbid", false);
+        derp.Add("optionAjkdsgfiudsgiugfdioghiuofdhv8\nfidighgvfdihgifdhihifdhivhofdihiufdhvidoifvfdiovfdivhofdihbid", false);
         derp.Add("optionb", false);
         derp.Add("optionc", true);
         derp.Add("optiond", true);
