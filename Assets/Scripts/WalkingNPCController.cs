@@ -20,7 +20,6 @@ public class WalkingNPCController : MonoBehaviour
         agent = this.GetComponent<NavMeshAgent>();
         animator = this.GetComponent<Animator>();
         animator.SetBool("isWalking", true);
-        avoid = GameObject.FindGameObjectWithTag("vehicle");
     }
     void FixedUpdate()
     {
@@ -28,7 +27,7 @@ public class WalkingNPCController : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("Wait Time: " + waitTime);
+        avoid = GameObject.FindGameObjectWithTag("vehicle");
 
         float avoidDist = Vector3.Distance(avoid.transform.position, transform.position);
         AvoidVehicle(avoidDist);
