@@ -50,6 +50,8 @@ public class MiniGameManager : MonoBehaviour {
             yield return new WaitForSeconds(5);
             panel.SetActive(false);
             print(Time.time);
+            
+            
         }
     }
 
@@ -82,13 +84,14 @@ public class MiniGameManager : MonoBehaviour {
 
 
     }
-    public void dostuff(string optionA,bool correct, string optionb, bool correct1, string optionc, bool correct2, string optiond, bool correct3)
+    public void dostuff(string optionA,bool correct, string optionb, bool correct1, string optionc, bool correct2, string optiond, bool correct3,string question)
     {
 
         derp.Add(optionA, correct);
         derp.Add(optionb, correct1);
         derp.Add(optionc, correct2);
         derp.Add(optiond, correct3);
+        Question.text = question;
 
     }
     public void dostuff()
@@ -96,7 +99,7 @@ public class MiniGameManager : MonoBehaviour {
 
         derp.Add("optionA", false);
         derp.Add("optionb", false);
-        derp.Add("optionc", false);
+        derp.Add("optionc", true);
         derp.Add("optiond",true);
 
     }
