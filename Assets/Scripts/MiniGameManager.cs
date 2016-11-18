@@ -3,35 +3,38 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class MiniGameManager : MonoBehaviour {
-
-  public Dictionary<string, bool> derp = new Dictionary<string, bool>();
- public  List<string> muligheder = new List<string>();
+public class MiniGameManager : MonoBehaviour
+{
+    public TimeBasedMiniGame tm;
+    public Dictionary<string, bool> derp = new Dictionary<string, bool>();
+    public List<string> muligheder = new List<string>();
     public bool miniGameTrigger;
     public GameObject panel;
     public Text Question;
-   // public Dropdown answears;
+    // public Dropdown answears;
     public Text svar1;
     public Text svar2;
     public Text svar3;
     public Text svar4;
 
     // Use this for initialization
-    void Start () {
-       
+    void Start()
+    {
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            miniGameStart(miniGameTrigger=true);
+            miniGameStart(miniGameTrigger = true);
             Debug.Log(miniGameTrigger);
             Debug.Log("p pressed");
         }
-	}
+    }
 
-    public void miniGameStart( bool miniGameTrigger)
+    public void miniGameStart(bool miniGameTrigger)
     {
         if (miniGameTrigger)
         {
@@ -43,15 +46,17 @@ public class MiniGameManager : MonoBehaviour {
 
     public IEnumerator miniGameComplete()
     {
-        if (miniGameTrigger==false)
+        if (miniGameTrigger == false)
         {
             Time.timeScale = 1;
             print(Time.time);
             yield return new WaitForSeconds(5);
             panel.SetActive(false);
             print(Time.time);
-            
-            
+            tm.call = true;
+            tm.waitTime = 0;
+            derp.Clear();
+            muligheder.Clear();
         }
     }
 
@@ -64,10 +69,10 @@ public class MiniGameManager : MonoBehaviour {
         dostuff();
         foreach (var item in derp)
         {
-            if (derp.Count>0)
+            if (derp.Count > 0)
             {
-            muligheder.Add(item.Key);
-            Debug.Log(item.Key);
+                muligheder.Add(item.Key);
+                Debug.Log(item.Key);
 
             }
             else
@@ -84,7 +89,7 @@ public class MiniGameManager : MonoBehaviour {
 
 
     }
-    public void dostuff(string optionA,bool correct, string optionb, bool correct1, string optionc, bool correct2, string optiond, bool correct3,string question)
+    public void dostuff(string optionA, bool correct, string optionb, bool correct1, string optionc, bool correct2, string optiond, bool correct3, string question)
     {
 
         derp.Add(optionA, correct);
@@ -100,11 +105,11 @@ public class MiniGameManager : MonoBehaviour {
         derp.Add("optionA", false);
         derp.Add("optionb", false);
         derp.Add("optionc", true);
-        derp.Add("optiond",true);
+        derp.Add("optiond", true);
 
     }
 
 
-   
+
 
 }
