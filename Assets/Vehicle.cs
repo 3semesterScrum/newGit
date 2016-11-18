@@ -53,6 +53,7 @@ public class Vehicle : MonoBehaviour
                 carOne.tag = "vehicle";
                 // Canvas  canvas = GameObject.Instantiate(Touch);
                 var derp = GameObject.FindGameObjectWithTag("GameController");
+                Debug.Log(derp.GetComponentInChildren<Image>());
                 Debug.LogError(derp.GetComponentInChildren<Image>());
                 carOne.gameObject.GetComponent<CubeMotor>().joystick = derp.GetComponentInChildren<Image>().GetComponent<VirtualJoystick>();
 
