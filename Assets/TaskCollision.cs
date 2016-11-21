@@ -5,17 +5,6 @@ public class TaskCollision : MonoBehaviour
 {
     public bool OnTarget = false;
     public int objectiveOrder = 0;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter(Collider col)
     {

@@ -279,14 +279,6 @@ public class CarController : MonoBehaviour
                                                      m_WheelColliders[0].attachedRigidbody.velocity.magnitude);
     }
 
-
-    // checks if the wheels are spinning and is so does three things
-    // 1) emits particles
-    // 2) plays tiure skidding sounds
-    // 3) leaves skidmarks on the ground
-    // these effects are controlled through the WheelEffects class
-    
-
     // crude traction control that reduces the power to wheel if the car is wheel spinning too much
     private void TractionControl()
     {

@@ -20,12 +20,6 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void CheckforObjective(Vector3 position)
     {
         objectiveCounter = 0;
@@ -47,7 +41,6 @@ public class TaskManager : MonoBehaviour
             }
             objectiveCounter++;
         }
-        
     }
 
     public void CreateTasks(int number)
