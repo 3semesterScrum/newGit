@@ -6,11 +6,11 @@ using System.Collections.Generic;
 public class MiniGameManager : MonoBehaviour
 {
     public TimeBasedMiniGame tm;
-    public Dictionary<string, bool> derp = new Dictionary<string, bool>();
+    public Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
     public List<string> muligheder = new List<string>();
     public bool miniGameTrigger;
     public GameObject panel;
-    public Text Question;
+    public Text question;
     // public Dropdown answears;
     public Text svar1;
     public Text svar2;
@@ -28,29 +28,29 @@ public class MiniGameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            miniGameStart(miniGameTrigger = true);
+            MiniGameStart(miniGameTrigger = true);
             Debug.Log(miniGameTrigger);
             Debug.Log("p pressed");
         }
     }
 
-    public void miniGameStart(bool miniGameTrigger)
+    public void MiniGameStart(bool miniGameTrigger)
     {
         if (miniGameTrigger)
         {
             Time.timeScale = 0;
-            setMiniGame();
+            SetMiniGame();
             panel.SetActive(true);
         }
     }
 
-    public IEnumerator miniGameComplete()
+    public IEnumerator MiniGameComplete()
     {
         if (miniGameTrigger == false)
         {
             Time.timeScale = 1;
             print(Time.time);
-            derp.Clear();
+            dictionary.Clear();
             muligheder.Clear();
             yield return new WaitForSeconds(5);
             panel.SetActive(false);
@@ -60,16 +60,16 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
-    public void setMiniGame()
+    public void SetMiniGame()
     {
         svar1.text = "option adfsbjkbjdsfbdsfoidhgdbgbfdiugdfkjghoidshgkndghfdjbgfdiuhgfjgiufdbvkfdjgufdbjgbfdugbdjbiuefhvbjkfdbiuvfhdubfjfdsgudbjgkduigu";
         svar2.text = "option b";
         svar3.text = "option c";
         svar4.text = "option d";
         dostuff();
-        foreach (var item in derp)
+        foreach (var item in dictionary)
         {
-            if (derp.Count > 0)
+            if (dictionary.Count > 0)
             {
                 muligheder.Add(item.Key);
                 Debug.Log(item.Key);
@@ -89,23 +89,23 @@ public class MiniGameManager : MonoBehaviour
 
 
     }
-    public void dostuff(string optionA, bool correct, string optionb, bool correct1, string optionc, bool correct2, string optiond, bool correct3, string question)
+    public void LoadQuestion(string optionA, bool correct, string optionb, bool correct1, string optionc, bool correct2, string optiond, bool correct3, string question)
     {
 
-        derp.Add(optionA, correct);
-        derp.Add(optionb, correct1);
-        derp.Add(optionc, correct2);
-        derp.Add(optiond, correct3);
-        Question.text = question;
+        dictionary.Add(optionA, correct);
+        dictionary.Add(optionb, correct1);
+        dictionary.Add(optionc, correct2);
+        dictionary.Add(optiond, correct3);
+        this.question.text = question;
 
     }
     public void dostuff()
     {
 
-        derp.Add("optionAjkdsgfiudsgiugfdioghiuofdhv8\nfidighgvfdihgifdhihifdhivhofdihiufdhvidoifvfdiovfdivhofdihbid", false);
-        derp.Add("optionb", false);
-        derp.Add("optionc", true);
-        derp.Add("optiond", true);
+        dictionary.Add("optionAjkdsgfiudsgiugfdioghiuofdhv8\nfidighgvfdihgifdhihifdhivhofdihiufdhvidoifvfdiovfdivhofdihbid", false);
+        dictionary.Add("optionb", false);
+        dictionary.Add("optionc", true);
+        dictionary.Add("optiond", true);
 
     }
 

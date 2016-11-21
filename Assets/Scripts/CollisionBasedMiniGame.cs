@@ -8,8 +8,8 @@ public class CollisionBasedMiniGame : MonoBehaviour {
     {
         if (col.gameObject.name == "Visitor")
         {
-            mg.dostuff("Ja", false, "Måske", false, "Idiot", true, "Nej", false, "Sup!");
-            mg.miniGameStart(true);
+            mg.LoadQuestion("Ja", false, "Måske", false, "Idiot", true, "Nej", false, "Sup!");
+            mg.MiniGameStart(true);
             Debug.Log("vi har lavet noget minigame");
         }
     }

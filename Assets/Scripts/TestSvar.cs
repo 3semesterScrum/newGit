@@ -28,7 +28,7 @@ public class TestSvar : MonoBehaviour
         var dip = gameObject.GetComponentInChildren<Text>().text;
         //Debug.Log(gameObject.GetComponent<Text>().text);
 
-        foreach (var item in mg.derp)
+        foreach (var item in mg.dictionary)
         {
             if (dip == item.Key && item.Value == true)
             {
@@ -37,7 +37,7 @@ public class TestSvar : MonoBehaviour
                 gameObject.GetComponent<Button>().colors = colorBlock;
                 mg.miniGameTrigger = false;
 
-                StartCoroutine(mg.miniGameComplete());
+                StartCoroutine(mg.MiniGameComplete());
             }
             else if (dip == item.Key && item.Value == false)
             {
@@ -48,7 +48,7 @@ public class TestSvar : MonoBehaviour
 
 
                 mg.miniGameTrigger = false;
-                StartCoroutine(mg.miniGameComplete());
+                StartCoroutine(mg.MiniGameComplete());
                 revertColors();
             }
         }
@@ -61,7 +61,7 @@ public class TestSvar : MonoBehaviour
         var button3 = GameObject.Find("Button (3)").GetComponentInChildren<Text>().text;
 
 
-        foreach (var item in mg.derp)
+        foreach (var item in mg.dictionary)
         {
             if (item.Value == true)
             {

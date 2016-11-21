@@ -19,7 +19,7 @@ public class TimeBasedMiniGame : MonoBehaviour
             switch (rndNumber)
             {
                 case 1:
-                    mg.dostuff(
+                    mg.LoadQuestion(
                         "Nej, i kælderen skal jeg sidde ned, med mindre køretøjet ikke har et sæde. I dette tilfælde skal jeg anvende hjelm.", true,
                         "Ja jeg må gerne stå op når jeg kører rundt.", false,
                         "Det bestemmer jeg selv", false,
@@ -27,7 +27,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                         "Skal du sidde ned under kørsel alle steder på AUH?");
                     break;
                 case 2:
-                    mg.dostuff(
+                    mg.LoadQuestion(
                         "Så mange som der kan være på bussen - både stående og siddende.", false,
                         "Der må være det antal patienter, som der er sæder til - ud over chaufførs eget sæde.", true,
                         "Kun én passager ad gangen, uanset, antallet af sæder.", false,
@@ -35,7 +35,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                         "Hvor mange passagerer må der være på en patient bus?");
                     break;
                 case 3:
-                    mg.dostuff(
+                    mg.LoadQuestion(
                         "", false,
                         "Ja, jeg må gerne høre musik.", false,
                         "Nej, jeg skal kunne høre hvad der sker omkring mig.", true,
@@ -47,7 +47,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                     break;
             }
             call = false;
-            mg.miniGameStart(true);
+            mg.MiniGameStart(true);
         }
     }
 
@@ -61,7 +61,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                 switch (rndNumber)
                 {
                     case 1:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                             "Råber til modkørende at patienten er ved at dø, så de skal holde til side.", false,
                             "Forventer at modkørende kan se patienten er dårlig og giver mig plads.", false,
                             "Sætter farten ned og signalere, at du udfører en akutkørsel og at modkørende skal give plads.", true,
@@ -69,7 +69,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                             "Du kommer kørende med en patient i en seng, der hurtigt skal frem, Du møder modkørende ved en smal passage, hvad gør du?");
                         break;
                     case 2:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                            "Ringer til alarm tlf. og venter på beredskabet kommer og tørre op.", true,
                            "Skynder dig at tørre op.", false,
                            "Åbner et brandskab og spuler med vand.", false,
@@ -77,7 +77,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                            "Du har tabt en dunk med sprit på gulvet. Hvad gør du?");
                         break;
                     case 3:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                            "Ikke noget, jeg har travlt og parkere med det samme.", false,
                            "Jeg må parkere hvor jeg vil, så længe det ikke er midt på gangen.", false,
                            "Jeg må parkere hvor jeg vil.", false,
@@ -95,7 +95,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                 switch (rndNumber)
                 {
                     case 1:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                             "Råber til modkørende at patienten er ved at dø, så de skal holde til side.", false,
                             "Forventer at modkørende kan se patienten er dårlig og giver mig plads.", false,
                             "Sætter farten ned og signalere, at du udfører en akutkørsel og at modkørende skal give plads.", true,
@@ -103,7 +103,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                             "Du kommer kørende med en patient i en seng, der hurtigt skal frem, Du møder modkørende ved en smal passage, hvad gør du?");
                         break;
                     case 2:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                            "Ringer til alarm tlf. og venter på beredskabet kommer og tørre op.", true,
                            "Skynder dig at tørre op.", false,
                            "Åbner et brandskab og spuler med vand.", false,
@@ -111,7 +111,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                            "Du har tabt en dunk med sprit på gulvet. Hvad gør du?");
                         break;
                     case 3:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                            "Ikke noget, jeg har travlt og parkere med det samme.", false,
                            "Jeg må parkere hvor jeg vil, så længe det ikke er midt på gangen.", false,
                            "Jeg må parkere hvor jeg vil.", false,
@@ -129,7 +129,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                 switch (rndNumber)
                 {
                     case 1:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                             "Råber til modkørende at patienten er ved at dø, så de skal holde til side.", false,
                             "Forventer at modkørende kan se patienten er dårlig og giver mig plads.", false,
                             "Sætter farten ned og signalere, at du udfører en akutkørsel og at modkørende skal give plads.", true,
@@ -137,7 +137,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                             "Du kommer kørende med en patient i en seng, der hurtigt skal frem, Du møder modkørende ved en smal passage, hvad gør du?");
                         break;
                     case 2:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                            "Ringer til alarm tlf. og venter på beredskabet kommer og tørre op.", true,
                            "Skynder dig at tørre op.", false,
                            "Åbner et brandskab og spuler med vand.", false,
@@ -145,7 +145,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                            "Du har tabt en dunk med sprit på gulvet. Hvad gør du?");
                         break;
                     case 3:
-                        mg.dostuff(
+                        mg.LoadQuestion(
                            "Ikke noget, jeg har travlt og parkere med det samme.", false,
                            "Jeg må parkere hvor jeg vil, så længe det ikke er midt på gangen.", false,
                            "Jeg må parkere hvor jeg vil.", false,
@@ -157,7 +157,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                 }
                 collisionTimer = 0;
             }
-            mg.miniGameStart(true);
+            mg.MiniGameStart(true);
         }
     }
 }
