@@ -62,7 +62,7 @@ public class MiniGameManager : MonoBehaviour
 
     public void setMiniGame()
     {
-        svar1.text = "option a";
+        svar1.text = "option adfsbjkbjdsfbdsfoidhgdbgbfdiugdfkjghoidshgkndghfdjbgfdiuhgfjgiufdbvkfdjgufdbjgbfdugbdjbiuefhvbjkfdbiuvfhdubfjfdsgudbjgkduigu";
         svar2.text = "option b";
         svar3.text = "option c";
         svar4.text = "option d";
@@ -102,7 +102,7 @@ public class MiniGameManager : MonoBehaviour
     public void dostuff()
     {
 
-        derp.Add("optionA", false);
+        derp.Add("optionAjkdsgfiudsgiugfdioghiuofdhv8\nfidighgvfdihgifdhihifdhivhofdihiufdhvidoifvfdiovfdivhofdihbid", false);
         derp.Add("optionb", false);
         derp.Add("optionc", true);
         derp.Add("optiond", true);
