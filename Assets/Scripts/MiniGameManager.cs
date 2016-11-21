@@ -40,7 +40,12 @@ public class MiniGameManager : MonoBehaviour
         {
             Time.timeScale = 0;
             SetMiniGame();
+            GameObject.Find("BackgroundImage").SetActive(false);
+            GameObject.Find("Button").SetActive(false);
+            GameObject.Find("TaskManagerPanel").SetActive(false);
+            GameObject.Find("ActionButton").SetActive(false);
             panel.SetActive(true);
+
         }
     }
 
