@@ -14,12 +14,6 @@ public class ButtonPush : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         buttonImg = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OnPointerDown(PointerEventData eventData)
     {
         Vector2 pos;
