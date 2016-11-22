@@ -21,7 +21,7 @@ public class MiniGameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       Debug.Log(tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>());
+       //Debug.Log(tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>());
     }
 
     // Update is called once per frame
@@ -37,40 +37,46 @@ public class MiniGameManager : MonoBehaviour
 
     public void MiniGameStart(bool miniGameTrigger)
     {
+        tm = GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>();
         if (miniGameTrigger)
         {
             Time.timeScale = 0;
             SetMiniGame();
-            if (SceneManager.GetActiveScene().name=="Hospital")
-            {
+            //if (SceneManager.GetActiveScene().name=="Hospital")
+            //{
+                panel.SetActive(true);
                 GameObject.Find("BackgroundImage").SetActive(false);
                 GameObject.Find("Button").SetActive(false);
                 GameObject.Find("TaskManagerPanel").SetActive(false);
                 GameObject.Find("ActionButton").SetActive(false);
 
-            }
-            panel.SetActive(true);
+            //}
 
         }
     }
 
     public IEnumerator MiniGameComplete()
     {
+        if (dictionary.Count == 4)
+        {
+            dictionary.Clear();
+            muligheder.Clear();
+        }
         if (miniGameTrigger == false)
         {
             Time.timeScale = 1;
             print(Time.time);
-            dictionary.Clear();
-            muligheder.Clear();
+            //dictionary.Clear();
+            //muligheder.Clear();
             yield return new WaitForSeconds(5);
             panel.SetActive(false);
-            if (SceneManager.GetActiveScene().name == "Hospital")
-            {
+            //if (SceneManager.GetActiveScene().name == "Hospital")
+            //{
                 GameObject.Find("BackgroundImage").SetActive(true);
                 GameObject.Find("Button").SetActive(true);
                 GameObject.Find("TaskManagerPanel").SetActive(true);
                 GameObject.Find("ActionButton").SetActive(true);
-            }
+            //}
             print(Time.time);
             tm.call = true;
             tm.waitTime = 0;
@@ -79,11 +85,12 @@ public class MiniGameManager : MonoBehaviour
 
     public void SetMiniGame()
     {
-        svar1.text = "option adfsbjkbjdsfbdsfoidhgdbgbfdiugdfkjghoidshgkndghfdjbgfdiuhgfjgiufdbvkfdjgufdbjgbfdugbdjbiuefhvbjkfdbiuvfhdubfjfdsgudbjgkduigu";
-        svar2.text = "option b";
-        svar3.text = "option c";
-        svar4.text = "option d";
-        dostuff();
+        
+        //svar1.text = "option adfsbjkbjdsfbdsfoidhgdbgbfdiugdfkjghoidshgkndghfdjbgfdiuhgfjgiufdbvkfdjgufdbjgbfdugbdjbiuefhvbjkfdbiuvfhdubfjfdsgudbjgkduigu";
+        //svar2.text = "option b";
+        //svar3.text = "option c";
+        //svar4.text = "option d";
+        //dostuff();
         foreach (var item in dictionary)
         {
             if (dictionary.Count > 0)

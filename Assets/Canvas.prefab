@@ -786,8 +786,8 @@ MonoBehaviour:
   tm: {fileID: 0}
   muligheder: []
   miniGameTrigger: 0
-  panel: {fileID: 1000010363178342}
-  Question: {fileID: 114000013573154702}
+  panel: {fileID: 1000014120403112, guid: e304228301d837243a1be6eb51cbe885, type: 2}
+  question: {fileID: 0}
   svar1: {fileID: 114000012691208320}
   svar2: {fileID: 114000011414512386}
   svar3: {fileID: 114000010682179994}
