@@ -59,6 +59,10 @@ public class MiniGameManager : MonoBehaviour
             muligheder.Clear();
             yield return new WaitForSeconds(5);
             panel.SetActive(false);
+            GameObject.Find("BackgroundImage").SetActive(true);
+            GameObject.Find("Button").SetActive(true);
+            GameObject.Find("TaskManagerPanel").SetActive(true);
+            GameObject.Find("ActionButton").SetActive(true);
             print(Time.time);
             tm.call = true;
             tm.waitTime = 0;
