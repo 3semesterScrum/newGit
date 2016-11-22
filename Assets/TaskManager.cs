@@ -7,6 +7,8 @@ public class TaskManager : MonoBehaviour
 {
     [SerializeField] private List<Text> tasks = new List<Text>(4);
     [SerializeField] private List<GameObject> taskObjects = new List<GameObject>();
+    [SerializeField] private CarController car;
+    [SerializeField] private Text textDistance;
     private int currentObjective = 0;
     public int objectiveCounter = 0;
     // Use this for initialization
@@ -20,6 +22,12 @@ public class TaskManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        float distance = Vector3.Distance(car.transform.position, taskObjects[objectiveCounter].transform.position);
+        int iDistance = (int)distance;
+        textDistance.text = "Distance: " + iDistance + "";
+    }
     public void CheckforObjective(Vector3 position)
     {
         objectiveCounter = 0;
