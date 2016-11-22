@@ -49,7 +49,7 @@ public class TestSvar : MonoBehaviour
 
                 mg.miniGameTrigger = false;
                 StartCoroutine(mg.MiniGameComplete());
-                revertColors();
+               // revertColors();
             }
         }
     }
@@ -113,22 +113,22 @@ public class TestSvar : MonoBehaviour
 
 
         var shit1 = GameObject.Find("Button (1)").GetComponent<Button>();
-        //ColorBlock newcolorBlock = shit.colors;
-        //newcolorBlock.highlightedColor = new Color(1, 1, 1, 1);
-        //newcolorBlock.normalColor = new Color(1, 1, 1, 1);
-        shit1.GetComponent<Button>().colors = newcolorBlock;
+        ColorBlock newcolorBlock1 = shit1.colors;
+        newcolorBlock1.highlightedColor = new Color(1, 1, 1, 1);
+        newcolorBlock1.normalColor = new Color(1, 1, 1, 1);
+        shit1.GetComponent<Button>().colors = newcolorBlock1;
 
         var shit2 = GameObject.Find("Button (2)").GetComponent<Button>();
-        //ColorBlock newcolorBlock = shit.colors;
-        //newcolorBlock.highlightedColor = new Color(1, 1, 1, 1);
-        //newcolorBlock.normalColor = new Color(1, 1, 1, 1);
-        shit2.GetComponent<Button>().colors = newcolorBlock;
+        ColorBlock newcolorBlock2 = shit2.colors;
+        newcolorBlock2.highlightedColor = new Color(1, 1, 1, 1);
+        newcolorBlock2.normalColor = new Color(1, 1, 1, 1);
+        shit2.GetComponent<Button>().colors = newcolorBlock2;
 
         var shit3 = GameObject.Find("Button (3)").GetComponent<Button>();
-        //ColorBlock newcolorBlock = shit.colors;
-        //newcolorBlock.highlightedColor = new Color(1, 1, 1, 1);
-        //newcolorBlock.normalColor = new Color(1, 1, 1, 1);
-        shit3.GetComponent<Button>().colors = newcolorBlock;
+        ColorBlock newcolorBlock3 = shit3.colors;
+        newcolorBlock3.highlightedColor = new Color(1, 1, 1, 1);
+        newcolorBlock3.normalColor = new Color(1, 1, 1, 1);
+        shit3.GetComponent<Button>().colors = newcolorBlock3;
 
     }
 }
