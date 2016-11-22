@@ -26,7 +26,7 @@ public class TaskManager : MonoBehaviour
     {
         float distance = Vector3.Distance(car.transform.position, taskObjects[objectiveCounter].transform.position);
         int iDistance = (int)distance;
-        textDistance.text = "Distance: " + iDistance + "";
+            textDistance.text = "Distance: " + iDistance + "";
     }
     public void CheckforObjective(Vector3 position)
     {
