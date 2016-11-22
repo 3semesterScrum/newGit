@@ -12,7 +12,7 @@ public class TimeBasedMiniGame : MonoBehaviour
     {
         collisionTimer += Time.deltaTime;
         waitTime += Time.deltaTime;
-        if (waitTime > 6 && call == true)
+        if (waitTime > 30 && call == true)
         {
             rndNumber = Random.Range(1, 3);
             Debug.Log("Rnd Nr: " + rndNumber);

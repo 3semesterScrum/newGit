@@ -21,7 +21,7 @@ public class MiniGameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       // tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>();
+       Debug.Log(tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>());
     }
 
     // Update is called once per frame
@@ -41,14 +41,14 @@ public class MiniGameManager : MonoBehaviour
         {
             Time.timeScale = 0;
             SetMiniGame();
-            //if (SceneManager.GetActiveScene().name=="Hospital")
-            //{
-            //GameObject.Find("BackgroundImage").SetActive(false);
-            //GameObject.Find("Button").SetActive(false);
-            //GameObject.Find("TaskManagerPanel").SetActive(false);
-            //GameObject.Find("ActionButton").SetActive(false);
-               
-            //}
+            if (SceneManager.GetActiveScene().name=="Hospital")
+            {
+                GameObject.Find("BackgroundImage").SetActive(false);
+                GameObject.Find("Button").SetActive(false);
+                GameObject.Find("TaskManagerPanel").SetActive(false);
+                GameObject.Find("ActionButton").SetActive(false);
+
+            }
             panel.SetActive(true);
 
         }
@@ -64,13 +64,13 @@ public class MiniGameManager : MonoBehaviour
             muligheder.Clear();
             yield return new WaitForSeconds(5);
             panel.SetActive(false);
-            //if (SceneManager.GetActiveScene().name == "Hospital")
-            //{
-            //    GameObject.Find("BackgroundImage").SetActive(true);
-            //    GameObject.Find("Button").SetActive(true);
-            //    GameObject.Find("TaskManagerPanel").SetActive(true);
-            //    GameObject.Find("ActionButton").SetActive(true);
-            //}
+            if (SceneManager.GetActiveScene().name == "Hospital")
+            {
+                GameObject.Find("BackgroundImage").SetActive(true);
+                GameObject.Find("Button").SetActive(true);
+                GameObject.Find("TaskManagerPanel").SetActive(true);
+                GameObject.Find("ActionButton").SetActive(true);
+            }
             print(Time.time);
             tm.call = true;
             tm.waitTime = 0;

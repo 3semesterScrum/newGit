@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -458,10 +458,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e3484af4934a3479469304fc62c434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientbus: {fileID: 1000013472139656, guid: 620a05ecde855764b8d3b18c7b6bd912, type: 2}
-  fejeblad: {fileID: 1000011282747742, guid: 8703952a5d87a9e4f8d7c8128257d1c1, type: 2}
+  patientbus: {fileID: 1000010161634708, guid: a763fb04ad1f19c4a9446d5d4c100931, type: 2}
+  fejeblad: {fileID: 1000012180411740, guid: 5a6af19ec442636498bc3d629d2cfd19, type: 2}
   elTruck: {fileID: 1000012874538026, guid: 2d93cce4c2e826c46b3e2bea6c2e5969, type: 2}
-  sengeTransporter: {fileID: 1000011712622622, guid: 0668ca3eebee6ec45a765341377d6e9d,
+  sengeTransporter: {fileID: 1000013989705884, guid: 4d448c621593f7348ba23330932b9ff7,
     type: 2}
 --- !u!23 &735741189
 MeshRenderer:

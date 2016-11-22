@@ -21,9 +21,9 @@ GameObject:
   - 4: {fileID: 4000010809958824}
   - 54: {fileID: 54000013621542430}
   - 114: {fileID: 114000011100209512}
-  - 114: {fileID: 114000011697373658}
   - 65: {fileID: 65000014076328418}
   - 114: {fileID: 114000010280149770}
+  - 114: {fileID: 114000013468096366}
   m_Layer: 0
   m_Name: PatientBusmk2
   m_TagString: Untagged
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitTime: 0
   call: 1
-  mg: {fileID: 0}
+  mg: {fileID: 114000010841809618, guid: e304228301d837243a1be6eb51cbe885, type: 2}
 --- !u!114 &114000011100209512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_RevRangeBoundary: 1
   m_SlipLimit: 0.3
   m_BrakeTorque: 20000
---- !u!114 &114000011697373658
+--- !u!114 &114000013468096366
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f1e9635ebacdb4b88304fe8dbf0a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 11401040, guid: 5af52d4d257c57849862133fbfa6b3b8, type: 2}
+  joystick: {fileID: 114000010494591644, guid: e304228301d837243a1be6eb51cbe885, type: 2}
 --- !u!124 &124000013448057974
 Behaviour:
   m_ObjectHideFlags: 1
