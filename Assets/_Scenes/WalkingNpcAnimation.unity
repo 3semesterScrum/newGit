@@ -158,6 +158,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 494170275}
   m_Script: {fileID: 11500000, guid: 6158a68f7f5354149b1adb3abeb9289a, type: 3}
+--- !u!114 &429319918 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013573154702, guid: b617590f738c13b459f89eaa3abc02c9,
+    type: 2}
+  m_PrefabInternal: {fileID: 494170275}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &494170275
 Prefab:
   m_ObjectHideFlags: 0
@@ -280,6 +286,11 @@ Prefab:
       propertyPath: m_FontData.m_VerticalOverflow
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013732398190, guid: b617590f738c13b459f89eaa3abc02c9,
+        type: 2}
+      propertyPath: question
+      value: 
+      objectReference: {fileID: 429319918}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b617590f738c13b459f89eaa3abc02c9, type: 2}
   m_IsPrefabParent: 0
