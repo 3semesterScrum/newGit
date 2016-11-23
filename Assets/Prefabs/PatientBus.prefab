@@ -143,6 +143,7 @@ GameObject:
   - 114: {fileID: 114000013677784576}
   - 65: {fileID: 65000013289432500}
   - 114: {fileID: 114000012562884708}
+  - 114: {fileID: 114000014199282286}
   m_Layer: 0
   m_Name: PatientBus
   m_TagString: Untagged
@@ -642,7 +643,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013472139656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27195c1c51aed1e4d86058222b33e18e, type: 3}
   m_Name: 
@@ -696,7 +697,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f1e9635ebacdb4b88304fe8dbf0a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 11401040, guid: 5af52d4d257c57849862133fbfa6b3b8, type: 2}
+  joystick: {fileID: 0}
+--- !u!114 &114000014199282286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013472139656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1764bca200895874b9c1e4a06d913c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mg: {fileID: 114000010841809618, guid: e304228301d837243a1be6eb51cbe885, type: 2}
 --- !u!124 &124000010761497600
 Behaviour:
   m_ObjectHideFlags: 1

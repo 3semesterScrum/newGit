@@ -12,5 +12,11 @@ public class CollisionBasedMiniGame : MonoBehaviour {
             mg.MiniGameStart(true);
             Debug.Log("vi har lavet noget minigame");
         }
+        if (col.gameObject.name == "TBonerMK2(Clone)")
+        {
+            mg.LoadQuestion("Ja", false, "Måske", false, "Idiot", true, "Nej", false, "Sup!");
+            mg.MiniGameStart(true);
+            Debug.Log("vi har lavet noget minigame");
+        }
     }
 }

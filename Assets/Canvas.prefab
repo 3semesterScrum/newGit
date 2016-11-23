@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000010921784438
 GameObject:
   m_ObjectHideFlags: 1
@@ -783,7 +783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6158a68f7f5354149b1adb3abeb9289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tm: {fileID: 0}
   muligheder: []
   miniGameTrigger: 0
   panel: {fileID: 1000014120403112, guid: e304228301d837243a1be6eb51cbe885, type: 2}

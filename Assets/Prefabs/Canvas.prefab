@@ -808,7 +808,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6158a68f7f5354149b1adb3abeb9289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tm: {fileID: 0}
   muligheder:
   - 'optionAjkdsgfiudsgiugfdioghiuofdhv8
 
@@ -871,6 +870,14 @@ MonoBehaviour:
   - "Ja jeg m\xE5 gerne st\xE5 op n\xE5r jeg k\xF8rer rundt."
   - Det bestemmer jeg selv
   - "Det skaber ingen problemer, s\xE5 det er ok"
+  - Ja
+  - "M\xE5ske"
+  - Idiot
+  - Nej
+  - Ja
+  - "M\xE5ske"
+  - Idiot
+  - Nej
   miniGameTrigger: 0
   panel: {fileID: 1000014120403112}
   question: {fileID: 114000012617842700}
@@ -1420,7 +1427,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Skal du sidde ned under k\xF8rsel alle steder p\xE5 AUH?"
+  m_Text: Sup!
 --- !u!114 &114000012783456084
 MonoBehaviour:
   m_ObjectHideFlags: 1

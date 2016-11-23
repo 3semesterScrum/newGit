@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameManager : MonoBehaviour
 {
-    public TimeBasedMiniGame tm;
+    //public TimeBasedMiniGame tm;
     public Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
     public List<string> muligheder = new List<string>();
     public bool miniGameTrigger;
@@ -21,7 +21,10 @@ public class MiniGameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       //Debug.Log(tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>());
+        //Debug.Log(tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>());
+       // panel = GameObject.Find("Panel");
+        panel.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -37,18 +40,20 @@ public class MiniGameManager : MonoBehaviour
 
     public void MiniGameStart(bool miniGameTrigger)
     {
-        tm = GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>();
+                panel.SetActive(true);
+        Debug.Log(panel);
+     //  tm = GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>();
         if (miniGameTrigger)
         {
+            
             Time.timeScale = 0;
             SetMiniGame();
             //if (SceneManager.GetActiveScene().name=="Hospital")
             //{
-                panel.SetActive(true);
-                GameObject.Find("BackgroundImage").SetActive(false);
-                GameObject.Find("Button").SetActive(false);
-                GameObject.Find("TaskManagerPanel").SetActive(false);
-                GameObject.Find("ActionButton").SetActive(false);
+                //GameObject.Find("BackgroundImage").SetActive(false);
+                //GameObject.Find("Button").SetActive(false);
+                //GameObject.Find("TaskManagerPanel").SetActive(false);
+                //GameObject.Find("ActionButton").SetActive(false);
 
             //}
 
@@ -72,14 +77,14 @@ public class MiniGameManager : MonoBehaviour
             panel.SetActive(false);
             //if (SceneManager.GetActiveScene().name == "Hospital")
             //{
-                GameObject.Find("BackgroundImage").SetActive(true);
-                GameObject.Find("Button").SetActive(true);
-                GameObject.Find("TaskManagerPanel").SetActive(true);
-                GameObject.Find("ActionButton").SetActive(true);
+                //GameObject.Find("BackgroundImage").SetActive(true);
+                //GameObject.Find("Button").SetActive(true);
+                //GameObject.Find("TaskManagerPanel").SetActive(true);
+                //GameObject.Find("ActionButton").SetActive(true);
             //}
             print(Time.time);
-            tm.call = true;
-            tm.waitTime = 0;
+            //tm.call = true;
+            //tm.waitTime = 0;
         }
     }
 

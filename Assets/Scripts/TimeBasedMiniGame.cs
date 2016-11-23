@@ -8,6 +8,14 @@ public class TimeBasedMiniGame : MonoBehaviour
     int rndNumber;
     public MiniGameManager mg;
     float collisionTimer = 0;
+
+    void Start()
+    {
+        //Debug.Log(tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>());
+        //  mg.panel = GameObject.Find("Panel");
+        //panel.SetActive(false);
+        mg =GameObject.Find("Canvas new").GetComponent<MiniGameManager>();
+    }
     void Update()
     {
         collisionTimer += Time.deltaTime;
@@ -47,6 +55,7 @@ public class TimeBasedMiniGame : MonoBehaviour
                     break;
             }
             call = false;
+           // mg.panel.SetActive(true);
             mg.MiniGameStart(true);
         }
     }
