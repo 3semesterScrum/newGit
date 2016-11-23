@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameManager : MonoBehaviour
 {
-    //public TimeBasedMiniGame tm;
+    public TimeBasedMiniGame tm;
     public Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
     public List<string> muligheder = new List<string>();
     public bool miniGameTrigger;
@@ -25,6 +25,7 @@ public class MiniGameManager : MonoBehaviour
        // panel = GameObject.Find("Panel");
         panel.SetActive(false);
        
+
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class MiniGameManager : MonoBehaviour
     {
                 panel.SetActive(true);
         Debug.Log(panel);
-     //  tm = GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>();
+      tm = GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>();
         if (miniGameTrigger)
         {
             
@@ -50,13 +51,14 @@ public class MiniGameManager : MonoBehaviour
             SetMiniGame();
             //if (SceneManager.GetActiveScene().name=="Hospital")
             //{
-                //GameObject.Find("BackgroundImage").SetActive(false);
-                //GameObject.Find("Button").SetActive(false);
-                //GameObject.Find("TaskManagerPanel").SetActive(false);
-                //GameObject.Find("ActionButton").SetActive(false);
+            //GameObject.Find("BackgroundImage").SetActive(false);
+            //GameObject.Find("Button").SetActive(false);
+            //GameObject.Find("TaskManagerPanel").SetActive(false);
+            //GameObject.Find("ActionButton").SetActive(false);
 
             //}
 
+          
         }
     }
 
@@ -74,6 +76,8 @@ public class MiniGameManager : MonoBehaviour
             //dictionary.Clear();
             //muligheder.Clear();
             yield return new WaitForSeconds(5);
+            var testsvar = GameObject.Find("Button (1)").GetComponent<TestSvar>();
+            testsvar.revertColors();
             panel.SetActive(false);
             //if (SceneManager.GetActiveScene().name == "Hospital")
             //{
@@ -83,8 +87,9 @@ public class MiniGameManager : MonoBehaviour
                 //GameObject.Find("ActionButton").SetActive(true);
             //}
             print(Time.time);
-            //tm.call = true;
-            //tm.waitTime = 0;
+            tm.call = true;
+            tm.waitTime = 0;
+           
         }
     }
 

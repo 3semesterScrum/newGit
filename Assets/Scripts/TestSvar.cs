@@ -49,7 +49,7 @@ public class TestSvar : MonoBehaviour
 
                 mg.miniGameTrigger = false;
                 StartCoroutine(mg.MiniGameComplete());
-               // revertColors();
+                //revertColors();
             }
         }
     }
@@ -110,6 +110,7 @@ public class TestSvar : MonoBehaviour
         newcolorBlock.highlightedColor = new Color(1, 1, 1, 1);
         newcolorBlock.normalColor = new Color(1, 1, 1, 1);
         shit.GetComponent<Button>().colors = newcolorBlock;
+        
 
 
         var shit1 = GameObject.Find("Button (1)").GetComponent<Button>();
