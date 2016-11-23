@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 19798957}
   m_Layer: 0
-  m_Name: Room (18)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 45553697}
   m_Layer: 0
-  m_Name: Room (17)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,7 +1226,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 100450019}
   m_Layer: 0
-  m_Name: Room (7)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2698,7 +2698,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 220968887}
   m_Layer: 0
-  m_Name: Room (22)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3473,7 +3473,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 295588015}
   m_Layer: 0
-  m_Name: Room (26)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3704,7 +3704,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 312638261}
   m_Layer: 0
-  m_Name: Room (4)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3930,7 +3930,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 371039637}
   m_Layer: 0
-  m_Name: Room (16)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5002,7 +5002,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 501908361}
   m_Layer: 0
-  m_Name: Room (19)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5815,7 +5815,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 585832436}
   m_Layer: 0
-  m_Name: Room (12)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6369,7 +6369,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 628837344}
   m_Layer: 0
-  m_Name: Room (14)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6472,7 +6472,7 @@ GameObject:
   - 65: {fileID: 631081752}
   - 23: {fileID: 631081751}
   m_Layer: 0
-  m_Name: Cube (19)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8207,7 +8207,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 803332461}
   m_Layer: 0
-  m_Name: Room (11)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8712,7 +8712,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 920460007}
   m_Layer: 0
-  m_Name: Room (29)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9555,7 +9555,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 975596076}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10198,7 +10198,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1042349490}
   m_Layer: 0
-  m_Name: Room (2)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10628,7 +10628,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1091932471}
   m_Layer: 0
-  m_Name: Room (8)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10842,7 +10842,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1105273311}
   m_Layer: 0
-  m_Name: Room (25)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11304,7 +11304,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1150212190}
   m_Layer: 0
-  m_Name: Room (6)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11343,7 +11343,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1158405164}
   m_Layer: 0
-  m_Name: Room (9)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11473,7 +11473,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1170174702}
   m_Layer: 0
-  m_Name: Room (13)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11507,7 +11507,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1171675383}
   m_Layer: 0
-  m_Name: Room (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13486,7 +13486,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1340693194}
   m_Layer: 0
-  m_Name: Room (24)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13780,7 +13780,7 @@ GameObject:
   - 65: {fileID: 1382155155}
   - 23: {fileID: 1382155154}
   m_Layer: 0
-  m_Name: Cube (18)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13871,7 +13871,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1388273556}
   m_Layer: 0
-  m_Name: Room (20)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14054,7 +14054,7 @@ GameObject:
   - 65: {fileID: 1478669425}
   - 23: {fileID: 1478669424}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14623,7 +14623,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1534721818}
   m_Layer: 0
-  m_Name: Room (27)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15529,7 +15529,7 @@ Prefab:
     - target: {fileID: 224000013875278646, guid: f7a0ea251bf8138469aace627e1e8a1c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 79.664185
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013004812074, guid: f7a0ea251bf8138469aace627e1e8a1c,
         type: 2}
@@ -15564,7 +15564,7 @@ Prefab:
     - target: {fileID: 224000012345487568, guid: f7a0ea251bf8138469aace627e1e8a1c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 18.45271
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013768994606, guid: f7a0ea251bf8138469aace627e1e8a1c,
         type: 2}
@@ -15599,7 +15599,7 @@ Prefab:
     - target: {fileID: 224000011546810750, guid: f7a0ea251bf8138469aace627e1e8a1c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 18.45271
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000010098823146, guid: f7a0ea251bf8138469aace627e1e8a1c,
         type: 2}
@@ -15634,7 +15634,7 @@ Prefab:
     - target: {fileID: 224000012936225556, guid: f7a0ea251bf8138469aace627e1e8a1c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 18.45271
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010865126794, guid: f7a0ea251bf8138469aace627e1e8a1c,
         type: 2}
@@ -18003,7 +18003,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1759534889}
   m_Layer: 0
-  m_Name: Room (15)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18636,7 +18636,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1813599860}
   m_Layer: 0
-  m_Name: Room (10)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19069,7 +19069,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1825702942}
   m_Layer: 0
-  m_Name: Room (28)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19617,7 +19617,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1876560421}
   m_Layer: 0
-  m_Name: Room (5)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20441,7 +20441,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1958600789}
   m_Layer: 0
-  m_Name: Room (21)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20886,7 +20886,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1991083393}
   m_Layer: 0
-  m_Name: Room (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22439,7 +22439,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2135493192}
   m_Layer: 0
-  m_Name: Room (23)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22619,7 +22619,7 @@ GameObject:
   - 65: {fileID: 2144461613}
   - 23: {fileID: 2144461612}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

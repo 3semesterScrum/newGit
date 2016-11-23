@@ -24,7 +24,7 @@ public class MiniGameManager : MonoBehaviour
         //tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>();
        // panel = GameObject.Find("Panel");
         panel.SetActive(false);
-       
+        Time.timeScale = 1;
 
     }
 

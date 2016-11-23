@@ -14,15 +14,19 @@ public class TimeBasedMiniGame : MonoBehaviour
         //Debug.Log(tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>());
         //  mg.panel = GameObject.Find("Panel");
         //panel.SetActive(false);
-        mg =GameObject.Find("Canvas new").GetComponent<MiniGameManager>();
+        mg = GameObject.Find("Canvas new").GetComponent<MiniGameManager>();
     }
     void Update()
     {
         collisionTimer += Time.deltaTime;
+        if (collisionTimer > 10)
+        {
+            call = true;
+        }
         waitTime += Time.deltaTime;
         if (waitTime > 60 && call == true)
         {
-            rndNumber = Random.Range(1, 3);
+            rndNumber = Random.Range(1, 4);
             Debug.Log("Rnd Nr: " + rndNumber);
             switch (rndNumber)
             {
@@ -55,18 +59,18 @@ public class TimeBasedMiniGame : MonoBehaviour
                     break;
             }
             call = false;
-           // mg.panel.SetActive(true);
+            // mg.panel.SetActive(true);
             mg.MiniGameStart(true);
         }
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if (collisionTimer > 60)
+        if (collisionTimer > 0 && call == true)
         {
             if (col.gameObject.name == "Visitor")
             {
-                rndNumber = Random.Range(1, 3);
+                rndNumber = Random.Range(1, 4);
                 switch (rndNumber)
                 {
                     case 1:
@@ -97,10 +101,12 @@ public class TimeBasedMiniGame : MonoBehaviour
                         break;
                 }
                 collisionTimer = 0;
+                call = false;
+                mg.MiniGameStart(true);
             }
-            if (col.gameObject.name == "Wall")
+            if (col.gameObject.name == "Wall" && call == true)
             {
-                rndNumber = Random.Range(1, 3);
+                rndNumber = Random.Range(1, 4);
                 switch (rndNumber)
                 {
                     case 1:
@@ -131,10 +137,12 @@ public class TimeBasedMiniGame : MonoBehaviour
                         break;
                 }
                 collisionTimer = 0;
+                call = false;
+                mg.MiniGameStart(true);
             }
-            if (col.gameObject.name == "Tboner")
+            if (col.gameObject.name == "TBonerMK2(Clone)" && call == true)
             {
-                rndNumber = Random.Range(1, 3);
+                rndNumber = Random.Range(1, 4);
                 switch (rndNumber)
                 {
                     case 1:
@@ -165,8 +173,9 @@ public class TimeBasedMiniGame : MonoBehaviour
                         break;
                 }
                 collisionTimer = 0;
+                mg.MiniGameStart(true);
+                call = false;
             }
-            mg.MiniGameStart(true);
         }
     }
 }
