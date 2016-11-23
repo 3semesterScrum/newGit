@@ -28,9 +28,12 @@ public class WalkingNPCController : MonoBehaviour
     void Update()
     {
         avoid = GameObject.FindGameObjectWithTag("vehicle");
-
         float avoidDist = Vector3.Distance(avoid.transform.position, transform.position);
-        AvoidVehicle(avoidDist);
+        if (this.tag == "visitor")
+        {
+
+            AvoidVehicle(avoidDist);
+        }
         if (avoidDist > 8)
         {
             float dist = Vector3.Distance(targets[i].transform.position, transform.position);

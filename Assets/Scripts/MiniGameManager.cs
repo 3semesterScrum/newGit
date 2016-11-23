@@ -21,7 +21,7 @@ public class MiniGameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //Debug.Log(tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>());
+        //tm= GameObject.FindGameObjectWithTag("vehicle").GetComponent<TimeBasedMiniGame>();
        // panel = GameObject.Find("Panel");
         panel.SetActive(false);
        
