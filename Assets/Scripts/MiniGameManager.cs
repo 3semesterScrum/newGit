@@ -96,6 +96,7 @@ public class MiniGameManager : MonoBehaviour
         //svar3.text = "option c";
         //svar4.text = "option d";
         //dostuff();
+                muligheder.Clear();
         foreach (var item in dictionary)
         {
             if (dictionary.Count > 0)
